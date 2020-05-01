@@ -14,18 +14,55 @@
                 <img class="h-8 w-auto sm:h-15" src="/images/logo.jpg" alt="shordy-url" />
               </a>
             </div>
+            <div class="-mr-2 flex items-center md:hidden">
+              <button type="button"
+                class="toggleMenu inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
           <div class="hidden md:block md:ml-10 md:pr-4">
-            <a href="#"
-              class="font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">ShordyUrl</a>
-
+            <a href="#features"
+              class="font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Features</a>
+            <a href="#ready"
+              class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out">Get
+              Started</a>
           </div>
         </nav>
       </div>
+      <div class="dropdown-content absolute top-0 inset-x-0 p-2 transition  invisible origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md">
+          <div class="rounded-lg bg-white shadow-xs overflow-hidden">
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="/images/logo.jpg" alt="" />
+              </div>
+              <div class="-mr-2">
+                <button type="button"
+                  class=" close-icon inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="px-2 pt-2 pb-3">
+              <a href="#features"
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Features</a>
+              <a href="#ready"
+                class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out">Get
+                Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div class="sm:text-center lg:text-left">
-          <h2
-            class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+          <h2 class="text-4xl tracking-tight hero-text font-extrabold text-gray-900 sm:text-5xl md:text-5xl">
             Create Click-Worthy Links with
             <br class="xl:hidden" />
             <span class="text-teal-600"> ShordyUrls</span>
@@ -45,26 +82,32 @@
 </div>
 
 {{!-- Search form section --}}
-<div class="bg-teal-200">
-  <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-    <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+<div id="ready" class="bg-teal-100">
+  <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-8 lg:px-8 lg:flex lg:items-center lg:justify-center">
+    <h2 class="text-3xl hero-text font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
       Ready to dive in?
       <br />
       <span class="text-teal-600">Paste the URL to be shortened.</span>
     </h2>
-    <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
-      <div class="inline-flex rounded-md shadow">
-        <a href="#"
-          class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+  </div>
+  <div class="max-w-screen-xl mx-auto pb-4 px-4 sm:px-6 lg:pb-12 lg:px-8 lg:flex lg:items-center lg:justify-center">
+    <form class="w-full">
+      <div class="flex flex-wrap md:flex-no-wrap items-center py-2">
+        <input
+          class="h-15 shadow appearance-none border rounded md:w-full w-full py-2 px-3 sm:mr-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text" placeholder="Enter the url to shorten" aria-label="Enter the url to shorten">
+        <button
+          class="w-full md:w-80 mt-4 sm:mt-0 flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white px-5 py-3 rounded text-base leading-6 font-bold focus:shadow-outline transition duration-150 ease-in-out "
+          type="button">
           Shorten Url
-        </a>
+        </button>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 
 {{!-- More info section --}}
-<div class="py-20 bg-white">
+<div id="features" class="py-20 bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="lg:text-center">
       <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
@@ -75,15 +118,26 @@
       </p>
     </div>
 
-    <div class="mt-10">
+    <div class="mt-20">
       <ul class="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
         <li>
           <div class="flex">
             <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
-                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              <div class="flex items-center justify-center">
+                <svg class="h-20 w-20" enable-background="new 0 0 32 32" height="512" viewBox="0 0 32 32" width="512"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m26 32h-20c-3.314 0-6-2.686-6-6v-20c0-3.314 2.686-6 6-6h20c3.314 0 6 2.686 6 6v20c0 3.314-2.686 6-6 6z"
+                    fill="#fff9dd" />
+                  <path
+                    d="m23.5 14c-.293 0-.58-.073-.833-.207v3.54c0 .367-.3.667-.667.667h-9.334c-.366 0-.666-.3-.666-.667v-6h5.834l1.12-1.12-.413-.42c-.474-.473-.654-1.16-.468-1.793h-5.74c-.92 0-1.667.747-1.667 1.667v8c0 .92.747 1.667 1.667 1.667h10.001c.92 0 1.667-.747 1.667-1.667v-3.74c-.161.053-.334.073-.501.073z"
+                    fill="#ffd200" />
+                  <g fill="#ffe777">
+                    <path
+                      d="m23.5 8h-3.667c-.202 0-.384.122-.462.309-.077.187-.035.402.108.545l1.362 1.362-3.313 3.313c-.26.26-.26.682 0 .943s.682.26.943 0l3.313-3.313 1.362 1.362c.096.096.224.146.354.146.064 0 .13-.012.191-.038.188-.078.309-.26.309-.462v-3.667c0-.276-.224-.5-.5-.5z" />
+                    <path
+                      d="m20 20.667v1.333c0 .367-.3.667-.667.667h-9.333c-.367 0-.667-.3-.667-.667v-9.3c-.76.153-1.333.827-1.333 1.633v8c0 .92.746 1.667 1.666 1.667h10c.92 0 1.667-.747 1.667-1.667v-1.667h-1.333z" />
+                  </g>
                 </svg>
               </div>
             </div>
@@ -98,11 +152,21 @@
         <li class="mt-10 md:mt-0">
           <div class="flex">
             <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
-                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                </svg>
+              <div class="flex items-center justify-center">
+                <svg class=" h-20 w-20 " xmlns="http://www.w3.org/2000/svg" height="512pt" viewBox="0 0 512 512"
+                  width="512pt">
+                  <path
+                    d="m416 512h-320c-53.023438 0-96-42.976562-96-96v-320c0-53.023438 42.976562-96 96-96h320c53.023438 0 96 42.976562 96 96v320c0 53.023438-42.976562 96-96 96zm0 0"
+                    fill="#f5e6fe" />
+                  <path
+                    d="m309.34375 330.671875h-24c-5.886719 0-10.671875-4.769531-10.671875-10.671875 0-5.886719 4.785156-10.671875 10.671875-10.671875h24c29.410156 0 53.328125-23.921875 53.328125-53.328125s-23.917969-53.328125-53.328125-53.328125h-24c-5.886719 0-10.671875-4.769531-10.671875-10.671875 0-5.886719 4.785156-10.671875 10.671875-10.671875h24c41.167969 0 74.65625 33.503906 74.65625 74.671875s-33.488281 74.671875-74.65625 74.671875zm0 0"
+                    fill="#be63f9" />
+                  <path
+                    d="m226.65625 330.671875h-24c-41.152344 0-74.65625-33.503906-74.65625-74.671875s33.488281-74.671875 74.671875-74.671875h24c5.886719 0 10.671875 4.769531 10.671875 10.671875 0 5.886719-4.785156 10.671875-10.671875 10.671875h-24c-29.40625 0-53.328125 23.921875-53.328125 53.328125s23.921875 53.328125 53.328125 53.328125h24c5.886719 0 10.671875 4.769531 10.671875 10.671875-.015625 5.886719-4.785156 10.671875-10.6875 10.671875zm0 0"
+                    fill="#be63f9" />
+                  <path
+                    d="m288 266.671875h-64c-5.886719 0-10.671875-4.769531-10.671875-10.671875 0-5.886719 4.785156-10.671875 10.671875-10.671875h64c5.886719 0 10.671875 4.769531 10.671875 10.671875 0 5.886719-4.785156 10.671875-10.671875 10.671875zm0 0"
+                    fill="#d9a4fc" /></svg>
               </div>
             </div>
             <div class="ml-4">
@@ -116,17 +180,21 @@
         <li class="mt-10 md:mt-0">
           <div class="flex">
             <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
-                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              <div class="flex items-center justify-center">
+                <svg class="h-20 w-20" height="512pt" viewBox="0 0 512 512" width="512pt"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m416 512h-320c-53.023438 0-96-42.976562-96-96v-320c0-53.023438 42.976562-96 96-96h320c53.023438 0 96 42.976562 96 96v320c0 53.007812-42.992188 96-96 96zm0 0"
+                    fill="#ffe6e2" />
+                  <path
+                    d="m312.71875 138c-23.085938 0-44.335938 11.167969-57.390625 29.375-13.054687-18.191406-34.304687-29.375-57.390625-29.375-38.929688 0-70.609375 31.617188-70.609375 70.464844 0 69.136718 105.535156 151.566406 115.023437 158.832031 3.390626 3.421875 8.0625 5.359375 12.976563 5.359375 4.910156 0 9.582031-1.9375 12.976563-5.359375 9.488281-7.265625 115.023437-89.695313 115.023437-158.832031 0-38.847656-31.679687-70.464844-70.609375-70.464844zm0 0"
+                    fill="#fc573b" /></svg>
               </div>
             </div>
             <div class="ml-4">
-              <h5 class="text-lg leading-6 font-medium text-gray-900">Reliable</h5>
+              <h5 class="text-lg leading-6 font-medium text-gray-900">Open Source</h5>
               <p class="mt-2 text-base leading-6 text-gray-500">
-                All links that try to disseminate spam, viruses and malware are deleted
+                Always free.
               </p>
             </div>
           </div>
@@ -134,11 +202,18 @@
         <li class="mt-10 md:mt-0">
           <div class="flex">
             <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
-                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                </svg>
+              <div class="flex items-center justify-center">
+                <svg class="w-20 h-20" height="512pt" viewBox="0 0 512 512" width="512pt"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m416 512h-320c-53.023438 0-96-42.976562-96-96v-320c0-53.023438 42.976562-96 96-96h320c53.023438 0 96 42.976562 96 96v320c0 53.007812-42.992188 96-96 96zm0 0"
+                    fill="#ffe6e2" />
+                  <path
+                    d="m170.097656 244.65625c4.734375 0 8.878906-3.070312 10.285156-7.632812l17.152344-57.199219c2.898438-9.136719 11.089844-15.183594 20.464844-15.183594 9.359375 0 17.566406 6.03125 20.398438 15.023437l43.570312 145.007813 27.296875-61.121094c5.101563-11.472656 16.589844-18.910156 29.261719-18.910156h44.800781v-85.3125c0-17.648437-14.351563-32-32-32h-192c-17.648437 0-32 14.351563-32 32v85.328125zm0 0"
+                    fill="#fd907e" />
+                  <path
+                    d="m338.527344 266c-4.253906 0-8.078125 2.464844-9.773438 6.257812l-27.3125 61.132813c-3.265625 7.617187-10.929687 12.609375-19.441406 12.609375-9.359375 0-17.566406-6.03125-20.398438-15.023438l-43.570312-145.007812-17.214844 57.277344c-4.222656 13.648437-16.542968 22.753906-30.703125 22.753906h-42.785156v85.328125c0 17.648437 14.351563 32 32 32h192c17.648437 0 32-14.351563 32-32v-85.328125zm0 0"
+                    fill="#fc573b" /></svg>
               </div>
             </div>
             <div class="ml-4">
@@ -156,3 +231,19 @@
 
 
 {{!-- Footer --}}
+<footer class="bg-gray-100">
+  <div class="container mx-auto px-8">
+    <div class="w-full flex flex-col md:flex-row py-6">
+      <div class="flex-1 mb-6">
+        <div class="mb-4">
+          Made by <a href="https://github.com/NavaneethVijay/" target="_blank" class="text-teal-600">NavaneethVijay</a>
+        </div>
+        <a target="_blank" href="https://github.com/NavaneethVijay/shordyurl" aria-label="View source on GitHub"
+          class="bg-gray-300 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+          <img width="20" height="20" src="/images/github.svg" alt="">
+          <span class="ml-2">view on github</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

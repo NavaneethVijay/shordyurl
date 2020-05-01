@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 30px;
+}
+.hero-text {
+  line-height: 60px;
+  @media (max-width: 1024px) {
+    line-height: 40px;
+  }
+}
+.dropdown-content {
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 0.5s ease-in-out;
+}
+
+.dropdown-content.open {
+  visibility: visible;
+  transform: scale(1);
+}
