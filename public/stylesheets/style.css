@@ -7,9 +7,6 @@ body {
 }
 .hero-text {
   line-height: 60px;
-  @media (max-width: 1024px) {
-    line-height: 40px;
-  }
 }
 .dropdown-content {
   transform: scale(0);
@@ -20,4 +17,9 @@ body {
 .dropdown-content.open {
   visibility: visible;
   transform: scale(1);
+}
+@media (max-width: 1024px) {
+  .hero-text {
+    line-height: 40px;
+  }
 }
