@@ -91,18 +91,27 @@
     </h2>
   </div>
   <div class="max-w-screen-xl mx-auto pb-4 px-4 sm:px-6 lg:pb-12 lg:px-8 lg:flex lg:items-center lg:justify-center">
-    <form class="w-full">
+    <form method="POST" id="shortenform" class="w-full">
       <div class="flex flex-wrap md:flex-no-wrap items-center py-2">
-        <input
+        <input name="originalUrl" required
           class="h-15 shadow appearance-none border rounded md:w-full w-full py-2 px-3 sm:mr-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text" placeholder="Enter the url to shorten" aria-label="Enter the url to shorten">
         <button
           class="w-full md:w-80 mt-4 sm:mt-0 flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white px-5 py-3 rounded text-base leading-6 font-bold focus:shadow-outline transition duration-150 ease-in-out "
-          type="button">
+          type="submit">
           Shorten Url
         </button>
       </div>
     </form>
+  </div>
+  <div class="max-w-screen-xl mx-auto pb-4 px-4 sm:px-6 lg:pb-12 lg:px-8 lg:flex lg:items-center lg:justify-center">
+    <div class="short-display bg-white w-full flex justify-between items-center px-6 py-6  rounded">
+      <a target="_blank" id="copy-link-text" class="short-url-link block text-teal-600" href=""></a>
+      <button id="copylink-btn" data-clipboard-target="#copy-link-text"
+        class="bg-transparent hover:bg-teal-500 text-teal-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded">
+        Copy
+      </button>
+    </div>
   </div>
 </div>
 
