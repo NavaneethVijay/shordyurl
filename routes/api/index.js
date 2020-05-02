@@ -7,7 +7,6 @@ var router = express.Router()
 
 router.post('/shorturl', async (req, res) => {
   const { originalUrl } = req.body
-  console.log(originalUrl)
   const shortBaseUrl = process.env.BASE_URL
   const urlCode = shortid.generate()
   const updatedAt = new Date()
